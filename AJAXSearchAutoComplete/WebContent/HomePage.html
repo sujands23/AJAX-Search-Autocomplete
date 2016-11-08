@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>HomePage</title>
+<style>
+#searchAreaText{
+	width:500px;
+	height:30px;
+}
+#AutoCompleteTable{
+	position: absolute;
+	width:500px;
+	border: 1px solid #eeeeee;
+	border-collapse: collapse;
+}
+#AutoCompleteTable td,th{
+	height: 30px;
+}
+#AutoCompleteTable tr:hover{
+	background-color: #eeeeee;
+	cursor:pointer;
+}
+#AutoCompleteTable tr td a{
+	display:block;
+	text-decoration: none;
+    font-family: Roboto, sans-serif;
+    font-size: 13px;
+	color: black;
+}
+</style>
+</head>
+<body onload="init()">
+	<h1>AJAX</h1>
+	<h2>Search using autocomplete</h2>
+	<div name="autofillForm">
+		<input type="text" value="" id="searchAreaText" name="searchAreaText" oninput="doCompletion()" placeholder="Search for products"/>
+		<div id="autoRow">
+			<table id="AutoCompleteTable" class="gridTable"></table>
+		</div>
+	</div>
+</body>
+<script type="text/javascript"	src="./AutoComplete.js"></script>
+</html>
